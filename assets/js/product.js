@@ -21,7 +21,7 @@ function renderProduct(product) {
 
   title.textContent = product.title;
   description.textContent = product.description;
-  buyButton.href = `https://t.me/YourBot?start=order_${product.id}`;
+  buyButton.href = TELEGRAM_CONTACT;
 
   gallery.innerHTML = product.images
     .map((src, index) => `<img src="${src}" alt="${product.title} — фото ${index + 1}">`)

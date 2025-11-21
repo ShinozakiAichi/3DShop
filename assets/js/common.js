@@ -1,4 +1,4 @@
-const TELEGRAM_CONTACT = 'https://t.me/YourBot?start=custom';
+const TELEGRAM_CONTACT = 'https://t.me/KNBmodel';
 const PRODUCTS_URL = '/data/products.json';
 
 function ready(fn) {
