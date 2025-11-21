@@ -76,7 +76,7 @@ function renderProducts(list) {
         <p>${item.description.slice(0, 90)}...</p>
         <div class="controls">
           <a class="button secondary" href="product.html?id=${item.id}">Подробнее</a>
-          <a class="button" href="${TELEGRAM_CONTACT}">Купить</a>
+          <a class="button" href="${buildOrderLink(item)}" target="_blank">Купить</a>
         </div>
       </article>
     `
