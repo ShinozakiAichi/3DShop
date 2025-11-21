@@ -26,6 +26,5 @@
 - `assets/img/products/*` — заглушки изображений товаров.
 
 ## Контакты
-- Telegram: [@YourBot](https://t.me/YourBot?start=custom)
-- WhatsApp: [wa.me/79991234567](https://wa.me/79991234567)
+- Telegram: [@KNBmodel](https://t.me/KNBmodel)
 - VK: [vk.com/yourpage](https://vk.com/yourpage)
