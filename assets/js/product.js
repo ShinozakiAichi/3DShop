@@ -21,7 +21,8 @@ function renderProduct(product) {
 
   title.textContent = product.title;
   description.textContent = product.description;
-  buyButton.href = TELEGRAM_CONTACT;
+  buyButton.href = buildOrderLink(product);
+  buyButton.target = '_blank';
 
   gallery.innerHTML = product.images
     .map((src, index) => `<img src="${src}" alt="${product.title} — фото ${index + 1}">`)

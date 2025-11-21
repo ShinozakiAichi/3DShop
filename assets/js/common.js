@@ -1,5 +1,11 @@
 const TELEGRAM_CONTACT = 'https://t.me/KNBmodel';
-const PRODUCTS_URL = '/data/products.json';
+const PRODUCTS_URL = 'data/products.json';
+
+function buildOrderLink(product) {
+  const text = `Хочу заказать модель "${product.title}" (ID: ${product.id}, цена: ${product.price} ₽)`;
+  const encoded = encodeURIComponent(text);
+  return `${TELEGRAM_CONTACT}?text=${encoded}`;
+}
 
 function ready(fn) {
   if (document.readyState === 'complete' || document.readyState === 'interactive') {
