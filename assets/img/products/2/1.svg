@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" fill="none">
+  <rect width="640" height="480" fill="#0F172A"/>
+  <rect x="160" y="80" width="320" height="320" rx="36" fill="#A855F7" opacity="0.85"/>
+  <circle cx="320" cy="240" r="110" fill="#C084FC" opacity="0.75"/>
+  <text x="320" y="440" text-anchor="middle" fill="#E2E8F0" font-family="'Inter', 'Arial', sans-serif" font-size="26" font-weight="700">Органайзер</text>
+</svg>

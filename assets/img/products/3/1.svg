@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" fill="none">
+  <rect width="640" height="480" fill="#111827"/>
+  <rect x="120" y="90" width="400" height="260" rx="30" fill="#F472B6" opacity="0.9"/>
+  <circle cx="200" cy="220" r="90" fill="#FB7185" opacity="0.8"/>
+  <text x="320" y="430" text-anchor="middle" fill="#F8FAFC" font-family="'Inter', 'Arial', sans-serif" font-size="26" font-weight="700">Держатель</text>
+</svg>

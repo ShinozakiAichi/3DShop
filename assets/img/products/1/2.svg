@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" fill="none">
+  <rect width="640" height="480" fill="#111827"/>
+  <rect x="120" y="120" width="320" height="220" rx="32" fill="#22D3EE" opacity="0.85"/>
+  <path d="M220 210 L320 150 L420 210 L320 270 Z" fill="#0F172A" opacity="0.8"/>
+  <text x="320" y="430" text-anchor="middle" fill="#E5E7EB" font-family="'Inter', 'Arial', sans-serif" font-size="26" font-weight="700">PLA Серый</text>
+</svg>

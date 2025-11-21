@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Товар — 3DShop</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/common.js"></script>
+  <script defer src="assets/js/product.js"></script>
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <a class="logo" href="/">3DShop</a>
+    <div class="nav-links">
+      <a href="/">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="contact.html">Контакты</a>
+      <button class="button secondary" type="button" data-modal-open>Связаться</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <header class="controls">
+    <a class="button secondary" href="catalog.html">Назад в каталог</a>
+    <a class="button" href="https://t.me/YourBot?start=custom">Заказать свою модель</a>
+  </header>
+
+  <article class="card">
+    <div class="product-meta">
+      <span class="badge">Модель</span>
+      <span id="product-error" class="badge" style="background: rgba(255, 86, 86, 0.12); color: #ffb1b1;"></span>
+    </div>
+    <h1 id="product-title">Загрузка...</h1>
+    <p id="product-description">Получаем информацию о товаре.</p>
+
+    <div class="detail">
+      <div>
+        <h3>Галерея</h3>
+        <div id="product-gallery" class="gallery"></div>
+      </div>
+      <div>
+        <h3>Характеристики</h3>
+        <div id="product-details"></div>
+        <div class="controls">
+          <a id="buy-button" class="button" href="#">Купить</a>
+          <a class="button secondary" href="https://t.me/YourBot?start=custom">Заказать свою модель</a>
+        </div>
+      </div>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>3DShop — 3D-печать на заказ и готовые модели. Telegram: <a href="https://t.me/YourBot?start=custom">@YourBot</a></p>
+</footer>
+
+<div class="modal-backdrop" role="dialog" aria-modal="true">
+  <div class="modal">
+    <h3>Свяжитесь с нами</h3>
+    <p>Напишите в удобный мессенджер, ответим в течение часа.</p>
+    <div class="actions">
+      <a class="button" href="https://t.me/YourBot?start=custom">Telegram</a>
+      <button class="button secondary" type="button" data-modal-close>Закрыть</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
