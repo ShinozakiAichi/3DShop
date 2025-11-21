@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" fill="none">
+  <rect width="640" height="480" fill="#0B1120"/>
+  <rect x="90" y="90" width="460" height="260" rx="40" fill="#F97316" opacity="0.9"/>
+  <path d="M140 340 Q320 120 500 340" stroke="#FBBF24" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <text x="320" y="80" text-anchor="middle" fill="#E2E8F0" font-family="'Inter', 'Arial', sans-serif" font-size="46" font-weight="700">18×12×15 см</text>
+</svg>
