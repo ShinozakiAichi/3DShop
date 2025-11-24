@@ -65,21 +65,30 @@ function renderProducts(list) {
 
   container.innerHTML = list
     .map(
-      (item) => `
-      <article class="card product-card">
-        <img src="${item.images[0]}" alt="${item.title}">
-        <div class="product-meta">
-          <span class="badge">${item.category}</span>
-          <span class="price">${item.price} ₽</span>
-        </div>
-        <h3>${item.title}</h3>
-        <p>${item.description.slice(0, 90)}...</p>
-        <div class="controls">
-          <a class="button secondary" href="product.html?id=${item.id}">Подробнее</a>
-          <a class="button" href="${buildOrderLink(item)}" target="_blank">Купить</a>
-        </div>
-      </article>
-    `
+      (item) => {
+        const hasMultipleImages = Array.isArray(item.images) && item.images.length > 1;
+        const coverImage = item.images?.[0];
+
+        return `
+        <article class="card product-card">
+          ${
+            hasMultipleImages
+              ? `<div class="gallery-wrapper"><img class="product-image" src="${coverImage}" alt="${item.title}"></div>`
+              : `<img class="product-image" src="${coverImage}" alt="${item.title}">`
+          }
+          <div class="product-meta">
+            <span class="badge">${item.category}</span>
+            <span class="price">${item.price} ₽</span>
+          </div>
+          <h3>${item.title}</h3>
+          <p>${item.description.slice(0, 90)}...</p>
+          <div class="controls">
+            <a class="button secondary" href="product.html?id=${item.id}">Подробнее</a>
+            <a class="button" href="${buildOrderLink(item)}" target="_blank">Купить</a>
+          </div>
+        </article>
+      `;
+      }
     )
     .join('');
 }

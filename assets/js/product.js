@@ -3,6 +3,49 @@ function getProductId() {
   return Number(params.get('id'));
 }
 
+function renderGallery(product) {
+  const gallery = document.getElementById('product-gallery');
+
+  if (!gallery) return;
+  if (!product.images || !product.images.length) {
+    gallery.innerHTML = '';
+    return;
+  }
+
+  const [cover] = product.images;
+
+  gallery.innerHTML = `
+    <div class="main-image">
+      <img class="gallery-image product-image" src="${cover}" alt="${product.title} — фото 1">
+    </div>
+    <div class="thumbs">
+      ${product.images
+        .map(
+          (src, index) =>
+            `<img class="thumbnail product-image${index === 0 ? ' active' : ''}" src="${src}" alt="${product.title} — миниатюра ${index + 1}" data-index="${index}">`
+        )
+        .join('')}
+    </div>
+  `;
+
+  const mainImage = gallery.querySelector('.gallery-image');
+  const thumbnails = gallery.querySelectorAll('.thumbnail');
+
+  thumbnails.forEach((thumb) => {
+    thumb.addEventListener('click', () => {
+      const imageIndex = Number(thumb.dataset.index) + 1;
+
+      if (mainImage) {
+        mainImage.src = thumb.getAttribute('src');
+        mainImage.alt = `${product.title} — фото ${imageIndex}`;
+      }
+
+      thumbnails.forEach((node) => node.classList.remove('active'));
+      thumb.classList.add('active');
+    });
+  });
+}
+
 function renderProduct(product) {
   const title = document.getElementById('product-title');
   const description = document.getElementById('product-description');
@@ -24,9 +67,7 @@ function renderProduct(product) {
   buyButton.href = buildOrderLink(product);
   buyButton.target = '_blank';
 
-  gallery.innerHTML = product.images
-    .map((src, index) => `<img src="${src}" alt="${product.title} — фото ${index + 1}">`)
-    .join('');
+  renderGallery(product);
 
   details.innerHTML = `
     <table class="table">
