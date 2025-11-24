@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "id": 1,
+    "title": "Фигурка \"Девушка призрак\"",
+    "description": "Фигурка Девушка призрак с высоким качеством печати",
+    "price": 600,
+    "category": "Фигурка",
+    "material": "PLA",
+    "size": "15",
+    "images": [
+      "https://raw.githubusercontent.com/ShinozakiAichi/3DShop/main/assets/img/products/1/1_20251124112556.jpg"
+    ]
+  }
+]
